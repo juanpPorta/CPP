@@ -6,7 +6,7 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:16:29 by jporta            #+#    #+#             */
-/*   Updated: 2022/06/07 19:36:01 by jporta           ###   ########.fr       */
+/*   Updated: 2022/06/07 19:44:08 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,14 +78,14 @@ void ft_search(PhoneBook *agenda, int a)
 	if (a > -1)
 	{
 		std::cout<<"------------------------------------"<<std::endl;
-			std::cout <<"Nombre:"<<"|";
-			std::cout <<"apellido:"<<"|";
+			std::cout<<"|"<<"Nombre:"<<"|";
+			std::cout<<"apellido:"<<"|";
 			std::cout<<"Login:"<<"|";
 			std::cout<<"numero:" <<"|";
 			std::cout<<"Secreto:" <<"|"<<std::endl;
 		while (agenda->contacts[++i].index == true)
 		{
-			std::cout<< agenda->contacts[i].get_data(1)<< "|";
+			std::cout<<"|"<< agenda->contacts[i].get_data(1)<< "|";
 			std::cout<< agenda->contacts[i].get_data(2)<< "|";
 			std::cout<< agenda->contacts[i].get_data(3)<< "|";
 			std::cout<< agenda->contacts[i].get_data(4)<< "|";
