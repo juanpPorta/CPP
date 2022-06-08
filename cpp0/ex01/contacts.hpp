@@ -6,12 +6,16 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:21:49 by jporta            #+#    #+#             */
-/*   Updated: 2022/06/07 19:23:46 by jporta           ###   ########.fr       */
+/*   Updated: 2022/06/08 14:36:24 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
+#include <iomanip>
+#include <iostream>
+#include <string>
+
 class Contacts
 {
 	private:
