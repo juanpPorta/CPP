@@ -6,39 +6,59 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:16:29 by jporta            #+#    #+#             */
-/*   Updated: 2022/06/08 15:32:21 by jporta           ###   ########.fr       */
+/*   Updated: 2022/06/08 20:06:15 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "agenda.hpp"
 #include <string>
+#include <iostream>
+
+bool isNumber(std::string str)
+{
+    for (int i = 0; str[i]; i++) {
+        if (std::isdigit(str[i]) == 0) return false;
+    }
+    return true;
+}
 
 int ft_add(PhoneBook *agenda, int num)
 {
 	std::string hola;
 
-	std::cout<<num<<std::endl;
-	std::cout<<"------------------------------------"<<std::endl;
-	std::cout<<"Dime el nombre del contacto"<<std::endl;
+	std::cout<<"----------------------------"<<std::endl;
+	std::cout<<"Dime el nombre del contacto:"<<std::endl;
+	std::cout<<"----------------------------"<<std::endl;
 	std::getline(std::cin, hola);
 	agenda->contacts[num].set_data(1, hola);
-	
-	std::cout<<"Dime el apellido del contacto"<<std::endl;
+	std::cout<<"------------------------------"<<std::endl;
+	std::cout<<"Dime el apellido del contacto:"<<std::endl;
+	std::cout<<"------------------------------"<<std::endl;
 	std::getline(std::cin, hola);
 	agenda->contacts[num].set_data(2, hola);
-	
-	std::cout<<"Dime el apodo del contacto"<<std::endl;
+	std::cout<<"---------------------------"<<std::endl;
+	std::cout<<"Dime el apodo del contacto:"<<std::endl;
+	std::cout<<"---------------------------"<<std::endl;
 	std::getline(std::cin, hola);
 	agenda->contacts[num].set_data(3, hola);
-	
-	std::cout<<"Dime el numero de telefono del contacto"<<std::endl;
+	std::cout<<"----------------------------------------"<<std::endl;
+	std::cout<<"Dime el numero de telefono del contacto:"<<std::endl;
+	std::cout<<"----------------------------------------"<<std::endl;
 	std::getline(std::cin, hola);
+	if(!isNumber(hola))
+		while (!isNumber(hola))
+		{
+			std::cout<<"----------------------------------------"<<std::endl;
+			std::cout<<"Numero no valido, vuelva a introducirlo:"<<std::endl;
+			std::cout<<"----------------------------------------"<<std::endl;
+			std::getline(std::cin, hola);
+		}
 	agenda->contacts[num].set_data(4, hola);
-
-	std::cout<<"Dime el secreto mas oscuro"<<std::endl;
+	std::cout<<"---------------------------"<<std::endl;
+	std::cout<<"Dime el secreto mas oscuro:"<<std::endl;
+	std::cout<<"---------------------------"<<std::endl;
 	std::getline(std::cin, hola);
 	agenda->contacts[num].set_data(5, hola);
-	std::cout<<"------------------------------------"<<std::endl;
 	agenda->contacts[num].index = true;
 	return(num);
 }
@@ -72,9 +92,9 @@ std::string Contacts::get_data(int index)
 	std::string str;
 	if (index == 1)
 	{
-		if (this->first_name.length() >= 10)
+		if (this->first_name.length() > 10)
 		{
-			str = this->first_name.substr(0,10);
+			str = this->first_name.substr(0,9);
 			str.append(1, '.');
 		}
 		else
@@ -83,7 +103,7 @@ std::string Contacts::get_data(int index)
 	}
 	else if (index == 2)
 	{
-		if (this->last_name.length() >= 10)
+		if (this->last_name.length() > 10)
 		{
 			str = this->last_name.substr(0,9);
 			str.append(1, '.');
@@ -94,7 +114,7 @@ std::string Contacts::get_data(int index)
 	}
 	else if (index == 3)
 	{
-		if (this->nickname.length() >= 10)
+		if (this->nickname.length() > 10)
 		{	
 			str = this->nickname.substr(0,9);
 			str.append(1, '.');;
@@ -105,8 +125,8 @@ std::string Contacts::get_data(int index)
 	}
 	else if (index == 4)
 	{
-		if (this->phone.length() >= 10)
-		{
+		if (this->phone.length() > 10)
+		{	
 			str = this->phone.substr(0,9);
 			str.append(1, '.');;
 		}
@@ -116,7 +136,7 @@ std::string Contacts::get_data(int index)
 	}
 	else if (index == 5)
 	{
-		if (this->darkest_secret.length() >= 10)
+		if (this->darkest_secret.length() > 10)
 		{
 			str = this->darkest_secret.substr(0,9);
 			str.append(1, '.');
@@ -169,8 +189,10 @@ void ft_search(PhoneBook *agenda, int a)
 				std::cout<<"-------------------------------------------------------------------"<<std::endl;
 		}
 		else
-			std::cout << "caracter no valido" << std::endl;
+			std::cout << "Indice no valio, Por favor vuelva a introducirlo" << std::endl;
 	}
+	else
+		std::cout << "NO HAY NA DE NA"<< std::endl;
 	std::cin.ignore();
 }
 
@@ -186,13 +208,13 @@ int main()
 	std::string action;
 	int num = -1;
 	int i = 0;
-	while (true)
-	{
 		std::cout<<"------------------------------------"<<std::endl;
 		std::cout<<"Bienvenido a la agenda buena buena"<<std::endl;
 		std::cout<<"Que quieres hacer (ADD, SEARCH, EXIT)"<<std::endl;
 		std::cout<<"------------------------------------"<<std::endl;
-		std::getline(std::cin, action);
+	while (std::getline(std::cin, action))
+	{
+		// std::getline(std::cin, action);
 
 		if (action.compare("EXIT") == 0)
 			break;
@@ -207,6 +229,10 @@ int main()
 		else if (action.compare("SEARCH") == 0)
 			ft_search(&agenda, num);
 		else
-			std::cout<<"opcion incorrecta"<<std::endl;
+		std::cout<<"opcion incorrecta"<<std::endl;
+		std::cout<<"------------------------------------"<<std::endl;
+		std::cout<<"Bienvenido a la agenda buena buena"<<std::endl;
+		std::cout<<"Que quieres hacer (ADD, SEARCH, EXIT)"<<std::endl;
+		std::cout<<"------------------------------------"<<std::endl;
 	}
 }

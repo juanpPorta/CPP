@@ -1,10 +1,10 @@
-NAME := death_note
+NAME := Logs
 
-SRCS =  program.cpp \
+SRCS =  Account.cpp test.cpp \
 
 OBJS = ${SRCS:.cpp=.o}
 
-GCC := clang++
+GCC := clang++ -Wall -Wextra -Werror -std=c++98 -g
 MV := mv -f
 RM := rm -f
 
@@ -12,7 +12,7 @@ RM := rm -f
 	$(GCC) -c $< -o $@ 
 
 $(NAME): $(OBJS)
-	$(GCC) -o $(NAME)  $^ -I $(INC_DIR)
+	$(GCC)  -o $(NAME)  $^
 
 all: $(NAME)
 
