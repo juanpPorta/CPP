@@ -50,6 +50,10 @@
 		"tuple": "cpp",
 		"type_traits": "cpp",
 		"typeinfo": "cpp",
-		"utility": "cpp"
+		"utility": "cpp",
+		"__split_buffer": "cpp",
+		"iomanip": "cpp",
+		"sstream": "cpp",
+		"vector": "cpp"
 	}
 }
