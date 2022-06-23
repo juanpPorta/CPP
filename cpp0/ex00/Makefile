@@ -4,7 +4,7 @@ SRCS =  megaphone.cpp \
 
 OBJS = ${SRCS:.cpp=.o}
 
-GCC := clang++
+GCC := clang++ -Wall -Wextra -Werror -std=c++98 -g
 MV := mv -f
 RM := rm -f
 

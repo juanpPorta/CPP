@@ -1,6 +1,6 @@
-NAME := death_note
+NAME := replace
 
-SRCS =  program.cpp \
+SRCS =  main.cpp \
 
 OBJS = ${SRCS:.cpp=.o}
 
@@ -9,19 +9,21 @@ MV := mv -f
 RM := rm -f
 
 %.o: %.cpp
-	$(GCC) -c $< -o $@ 
+	@$(GCC) -c $< -o $@ 
 
 $(NAME): $(OBJS)
-	$(GCC) -o $(NAME)  $^ -I $(INC_DIR)
+	 @$(GCC) -I .  -o $(NAME)  $^
 
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
-	$(RM) $(OBJS)
+	@$(RM) $(NAME)
+	@$(RM) $(OBJS)
+	@$(RM) *.replace
+	
 
 re: clean all
 
