@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
+/*   By: juan <juan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:13:15 by jporta            #+#    #+#             */
-/*   Updated: 2022/06/23 17:19:11 by jporta           ###   ########.fr       */
+/*   Updated: 2022/06/24 14:17:07 by juan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 	std::string s1 = (std::string)argv[2];
 	std::string s2 = (std::string)argv[3];
 	file.open(filename, std::ios::in);
-	newfile.open(newfilename, std::ios::out);
+	newfile.open((std::string)newfilename, std::ios::out);
 	while (std::getline(file, line))
 	{
 		if (line.find(s1) != (unsigned long)-1)

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jporta <jporta@student.42.fr>              +#+  +:+       +#+         #
+#    By: juan <juan@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/15 15:38:46 by jporta            #+#    #+#              #
-#    Updated: 2022/06/15 16:59:43 by jporta           ###   ########.fr        #
+#    Updated: 2022/06/23 18:08:14 by juan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS =  newZombie.cpp main.cpp Zombie.cpp \
 
 OBJS = ${SRCS:.cpp=.o}
 
-GCC := clang++ -Wall -Wextra -Werror -std=c++98 -g
+GCC := c++exi -Wall -Wextra -Werror -std=c++98 -g
 MV := mv -f
 RM := rm -f
 

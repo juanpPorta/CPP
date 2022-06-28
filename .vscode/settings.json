@@ -54,6 +54,11 @@
 		"__split_buffer": "cpp",
 		"iomanip": "cpp",
 		"sstream": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"array": "cpp",
+		"*.tcc": "cpp",
+		"clocale": "cpp",
+		"cmath": "cpp",
+		"fstream": "cpp"
 	}
 }
