@@ -59,6 +59,9 @@
 		"*.tcc": "cpp",
 		"clocale": "cpp",
 		"cmath": "cpp",
-		"fstream": "cpp"
+		"fstream": "cpp",
+		"deque": "cpp",
+		"stack": "cpp",
+		"filesystem": "cpp"
 	}
 }
