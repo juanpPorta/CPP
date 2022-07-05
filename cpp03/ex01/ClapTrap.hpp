@@ -16,8 +16,8 @@ class ClapTrap
 		int _atackDamage;
 	public:
 		ClapTrap();
-		ClapTrap(std::string _name);
-		~ClapTrap();
+		ClapTrap(std::string name);
+		virtual ~ClapTrap();
 		ClapTrap(const ClapTrap &copy);
 		ClapTrap &operator=(const ClapTrap &ct);
 
@@ -26,10 +26,10 @@ class ClapTrap
 		int getEnergyPoints(void) const;
 		int getAttackDamage(void) const;
 
-		void setName(std::string name);
-		void setHitPoints(int hitpoints);
-		void setEnergyPoints (int energy);
-		void setAttackDamage (int attack);
+		void setName(const std::string name);
+		void setHitPoints(const int hitpoints);
+		void setEnergyPoints (const int energy);
+		void setAttackDamage (const int attack);
 
 		void attack(std::string const & target);
 		void takeDamage(unsigned int amount);

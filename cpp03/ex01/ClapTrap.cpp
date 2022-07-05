@@ -6,7 +6,7 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:49:54 by jporta            #+#    #+#             */
-/*   Updated: 2022/07/05 15:42:51 by jporta           ###   ########.fr       */
+/*   Updated: 2022/07/05 16:01:51 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,11 +97,10 @@ void ClapTrap::attack(std::string const & target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	std::cout<<"ClapTrap "<< this->_name << " takes "<< amount << " points of damage! "<<std::endl;
-		std::cout<< this->_name<< " is death"<<std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout<<"ClapTrap "<<this->_name << " takes "<< amount << " points!"<<std::endl;
+	std::cout<<"ClapTrap "<<this->_name << " takes "<< amount << " points yea Be Repaired!"<<std::endl;
 }
 

@@ -17,7 +17,7 @@ class ClapTrap
 		int _health;
 	public:
 		ClapTrap();
-		ClapTrap(std::string _name);
+		ClapTrap(std::string name);
 		~ClapTrap();
 		ClapTrap(const ClapTrap &copy);
 		ClapTrap &operator=(const ClapTrap &ct);
