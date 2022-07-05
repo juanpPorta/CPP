@@ -9,13 +9,15 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string _name;
 		int _hitpoints;
 		int _energyPoints;
 		int _atackDamage;
+
+		ClapTrap(void);
+
 	public:
-		ClapTrap();
 		ClapTrap(std::string name);
 		virtual ~ClapTrap();
 		ClapTrap(const ClapTrap &copy);
