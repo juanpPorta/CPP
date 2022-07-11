@@ -24,7 +24,7 @@ int main()
     std::cout << std::endl << std::endl << std::endl;
 	//USE OF VIRTUAL
 	const WrongAnimal* wc = new WrongCat();
-	const WrongCat* wc2 = new WrongCat();
+	const WrongDog* wc2 = new WrongDog();
 	wc->makeSound();
 	wc2->makeSound();
 	delete wc;
