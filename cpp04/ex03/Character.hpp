@@ -7,12 +7,12 @@
 
 class AMateria;
 
-class Character
+class Character : public ICharacter
 {
 	private:
 		std::string name;
-		AMateria* inventory[4];
-		int unequip;
+		AMateria *inventory[4];
+		int nequip;
 	public:
 		Character();
 		Character(std::string name);

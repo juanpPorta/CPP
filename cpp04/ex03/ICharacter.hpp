@@ -5,12 +5,6 @@
 #include <string>
 #include "AMateria.hpp"
 
-class Character : public ICharacter
-{
-	private:
-		std::string inventory[4];
-};
-
 class ICharacter
 {
 	public:
