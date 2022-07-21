@@ -1,11 +1,11 @@
-NAME := ex01
+NAME := ex03
 
-SRCS =  AMateria.cpp ICharacter.cpp\
-		IMateriaSource.cpp main.cpp\
+SRCS =  AMateria.cpp Character.cpp\
+		MateriaSource.cpp main.cpp Cure.cpp Ice.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
 
-GCC := c++  -Wshadow -Wno-shadow -Wall -Wextra -Werror -std=c++98 -g
+GCC := c++  -Wshadow -Wno-shadow -Wall -Wextra -Werror  -std=c++98 -g
 MV := mv -f
 RM := rm -f
 

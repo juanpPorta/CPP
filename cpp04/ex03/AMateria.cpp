@@ -2,7 +2,6 @@
 
 AMateria::AMateria()
 {
-	std::cout<<"Llamada a AMateria constrcutor"<<std::endl;
 }
 AMateria::AMateria(const AMateria &copy)
 {
@@ -10,7 +9,7 @@ AMateria::AMateria(const AMateria &copy)
 }
 AMateria::~AMateria()
 {
-	std::cout<<"Llamada a AMateria Destructor"<<std::endl;
+	
 }
 AMateria &AMateria::operator=(const AMateria &amateria)
 {

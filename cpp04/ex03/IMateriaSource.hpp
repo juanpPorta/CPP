@@ -4,6 +4,7 @@
 #include <cctype>
 #include <string>
 #include "AMateria.hpp"
+
 class IMateriaSource
 {
 	public:

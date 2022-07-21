@@ -19,7 +19,6 @@ Character::Character(std::string name) : nequip(0)
 
 Character::~Character()
 {
-	std::cout<<"calls destructor Character"<<std::endl;
 	for (int i = 0; i < 4; i++)
 		delete this->inventory[i];
 }
@@ -43,6 +42,7 @@ std::string const &Character::getName() const
 {
 	return this->name;
 }
+
 void Character::equip(AMateria* m)
 {
 	if (this->nequip < 4)
@@ -56,13 +56,19 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-	this->inventory[idx] = NULL;
+	if (idx < 4 && idx >= 0)
+		this->inventory[idx] = NULL;
+	else
+		std::cout<<"u dont have more space, unequip any materia"<<std::endl;
 }
 
 void Character::use(int idx, ICharacter& target)
 {
 	if(inventory[idx])
+	{
 		this->inventory[idx]->use(target);
+	}
+		
 }
 
 void Character::setName(std::string name)
