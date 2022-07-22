@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   program.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
+/*   By: juan <juan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:16:29 by jporta            #+#    #+#             */
-/*   Updated: 2022/06/08 20:06:15 by jporta           ###   ########.fr       */
+/*   Updated: 2022/07/22 21:06:29 by juan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,18 +196,11 @@ void ft_search(PhoneBook *agenda, int a)
 	std::cin.ignore();
 }
 
-void lekas()
-{
-	system("leaks death_note");
-}
-
 int main()
 {
-	atexit(lekas);
 	PhoneBook agenda;
 	std::string action;
 	int num = -1;
-	int i = 0;
 		std::cout<<"------------------------------------"<<std::endl;
 		std::cout<<"Bienvenido a la agenda buena buena"<<std::endl;
 		std::cout<<"Que quieres hacer (ADD, SEARCH, EXIT)"<<std::endl;

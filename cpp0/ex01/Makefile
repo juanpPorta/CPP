@@ -12,7 +12,7 @@ RM := rm -f
 	$(GCC) -c $< -o $@ 
 
 $(NAME): $(OBJS)
-	$(GCC) -o $(NAME)  $^ -I $(INC_DIR)
+	$(GCC) -o $(NAME)  $^ -I .
 
 all: $(NAME)
 
