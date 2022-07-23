@@ -1,7 +1,6 @@
 NAME := ex01
 
-SRCS =  main.cpp Animal.cpp Dog.cpp Cat.cpp \
-		Brain.cpp\
+SRCS =  Bureaucrat.cpp main.cpp Form.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

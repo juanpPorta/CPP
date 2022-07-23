@@ -5,7 +5,7 @@ SRCS =  AMateria.cpp Character.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
 
-GCC := c++  -Wshadow -Wno-shadow -Wall -Wextra -Werror  -std=c++98 -g
+GCC := clang++  -Wshadow -Wno-shadow -Wall -Wextra -Werror  -std=c++98 -g
 MV := mv -f
 RM := rm -f
 
