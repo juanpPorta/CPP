@@ -1,0 +1,13 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/c/Users/juanp/Documents/programas/CPP/cpp05/ex02'
+echo "------------------------------------------------------------------------------------------------"
+clang++  -Wshadow -Wno-shadow -Wall -Wextra -Werror -std=c++98 -g -c Bureaucrat.cpp -o Bureaucrat.o 
+echo "------------------------------------------------------------------------------------------------"
+clang++  -Wshadow -Wno-shadow -Wall -Wextra -Werror -std=c++98 -g -c main.cpp -o main.o 
+echo "------------------------------------------------------------------------------------------------"
+clang++  -Wshadow -Wno-shadow -Wall -Wextra -Werror -std=c++98 -g -c Form.cpp -o Form.o 
+echo "------------------------------------------------------------------------------------------------------------------------------------------------"
+clang++  -Wshadow -Wno-shadow -Wall -Wextra -Werror -std=c++98 -g -I .  -o ex01  Bureaucrat.o main.o Form.o
+echo "------------------------------------------------------------------------------------------------------------------------------------------------"
+make: Leaving directory '/mnt/c/Users/juanp/Documents/programas/CPP/cpp05/ex02'
+ 
