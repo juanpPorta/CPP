@@ -1,4 +1,4 @@
-NAME := ex02
+NAME := ex03
 
 SRCS =  Bureaucrat.cpp main.cpp Form.cpp \
 		ShrubberyCreationForm.cpp RobotomyRequestForm.cpp \
