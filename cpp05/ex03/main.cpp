@@ -6,7 +6,7 @@
 /*   By: juan <juan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:39:42 by juan              #+#    #+#             */
-/*   Updated: 2022/07/25 19:58:57 by juan             ###   ########.fr       */
+/*   Updated: 2022/07/25 21:24:16 by juan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int main()
 	Form*	form1;
 	Form*	form2;
 	Form*	form3;
-	Form*	form4;
 
 	try
 	{
@@ -41,8 +40,7 @@ int main()
 		delete form1;
 		delete form2;
 		delete form3;
-
-		form4 = someRandom.makeForm("aaaaa", "target");
+		delete a;
 	}
 	catch(const std::exception& e)
 	{
