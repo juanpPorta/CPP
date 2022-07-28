@@ -1,6 +1,6 @@
 NAME := ex00
 
-SRCS =  main.cpp Conversion.cpp\
+SRCS =  main.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
 
