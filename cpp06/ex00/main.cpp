@@ -59,8 +59,14 @@ int main(int argc, char**argv)
 	Num = argv[1];
 	try{
 
-		numWord = std::stod(Num);
-
+		if (Num == "+inff")
+			numWord = 1.0 / 0.0;
+		else if(Num == "-inff")
+			numWord = -1.0 / 0.0;
+		else if (Num == "nanf")
+			numWord = 0.0 / 0.0;
+		else
+			numWord = std::stod(Num);
 		toChar(numWord);
 		toInt(numWord);
 		toFloat(numWord);
