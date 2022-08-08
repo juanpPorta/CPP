@@ -1,6 +1,8 @@
+
 #include <string>
 #include <math.h>
 #include <iostream>
+
 
 
 void toChar(double numWord)

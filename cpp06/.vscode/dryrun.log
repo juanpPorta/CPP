@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/c/Users/juanp/Documents/programas/CPP/cpp06'
+make: Leaving directory '/mnt/c/Users/juanp/Documents/programas/CPP/cpp06'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
