@@ -29,6 +29,33 @@ Base *generate(void)
 	return(w);
 }
 
+void identify(Base& p)
+{
+	try
+	{
+		(void)dynamic_cast<A&>(p);
+		std::cout<<"calls A by reference"<<std::endl;
+	}catch(const std::exception &e)
+	{
+		try
+		{
+			(void)dynamic_cast<B&>(p);
+			std::cout<<"calls B by reference"<<std::endl;
+		}catch(const std::exception& e)
+		{
+			try
+			{
+				(void)dynamic_cast<C&>(p);
+				std::cout<<"calls C by reference"<<std::endl;
+			}catch(const std::exception &e)
+			{
+				std::cerr<<e.what()<<std::endl;
+			}
+		}
+
+	}
+}
+
 void identify(Base *p)
 {
 	if (p == dynamic_cast<A*>(p))
@@ -41,8 +68,9 @@ void identify(Base *p)
 
 int main(void)
 {
-	Base *ptr;
-	ptr = generate();
+	Base *ptr = generate();
 	identify(ptr);
+	identify(*ptr);
+	delete ptr;
 	return(0);
 }
