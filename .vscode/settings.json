@@ -63,5 +63,6 @@
 		"deque": "cpp",
 		"stack": "cpp",
 		"filesystem": "cpp"
-	}
+	},
+	"C_Cpp.errorSquiggles": "Disabled"
 }
