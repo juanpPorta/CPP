@@ -1,5 +1,6 @@
 #include <iostream>
-#include <Array.hpp>
+#include "Array.hpp"
+#include <math.h>
 
 #define MAX_VAL 750
 int main(int, char**)
@@ -27,6 +28,7 @@ int main(int, char**)
             return 1;
         }
     }
+	
     try
     {
         numbers[-2] = 0;

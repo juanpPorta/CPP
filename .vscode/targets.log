@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug  9 19:08:50 2022
+# Make data base, printed on Mon Aug 22 15:23:31 2022
 
 # Variables
 
@@ -17,7 +17,7 @@ make: *** No rule to make target 'all'.  Stop.
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
 # default
 .SHELLFLAGS := -c
 # automatic
@@ -33,7 +33,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/juan/.vscode-server/bin/da76f93349a72022ca4670c1b84860304616aaa2/node
+_ = /home/juan/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/node
 # makefile
 MAKEFILE_LIST := 
 # 'override' directive
@@ -47,11 +47,13 @@ VSCODE_CWD = /mnt/c/Users/juanp/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/juan/.vscode-server/bin/da76f93349a72022ca4670c1b84860304616aaa2/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Users/juanp/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/juanp/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/juanp/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/juanp/.dotnet/tools:/mnt/c/Users/juanp/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/snap/bin
+PATH = /home/juan/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Users/juanp/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/juanp/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/juanp/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Users/juanp/.dotnet/tools:/mnt/c/Users/juanp/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/snap/bin
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-bdfef786-065a-4d59-8efa-be4bb0aae8ab.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-e055fee5-d016-4e6d-ace0-7b6dab4b9cfb.sock
+# environment
+VSCODE_SERVER_TAR = /mnt/c/Users/juanp/AppData/Local/Temp/vscode-remote-wsl/e4503b30fc78200f846c62cf8091b76ff5547662/vscode-server-stable-linux-x64.tar.gz
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -63,7 +65,7 @@ PWD = /mnt/c/Users/juanp/Documents/programas/CPP
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/11_interop
+WSL_INTEROP = /run/WSL/8_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -138,8 +140,10 @@ LANG = C
 TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu
+# environment
+MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=63/1024=6%, Rehash=0, Collisions=4/85=5%
+# Load=65/1024=6%, Rehash=0, Collisions=4/87=5%
 
 # Pattern-specific Variable Values
 
@@ -205,6 +209,6 @@ GNUmakefile:
 # strcache performance: lookups = 24 / hit rate = 12%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Tue Aug  9 19:08:50 2022
+# Finished Make data base on Mon Aug 22 15:23:31 2022
 
  
