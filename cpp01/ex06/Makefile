@@ -4,7 +4,7 @@ SRCS =  main.cpp Karen.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-GCC := c++ -std=c++98 -g
+GCC := c++ -Wall -Wextra -Werror -std=c++98 -g
 MV := mv -f
 RM := rm -f
 

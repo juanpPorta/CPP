@@ -6,7 +6,7 @@
 #    By: jporta <jporta@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/15 16:58:37 by jporta            #+#    #+#              #
-#    Updated: 2022/06/15 17:05:44 by jporta           ###   ########.fr        #
+#    Updated: 2022/08/30 15:59:49 by jporta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS =  main.cpp Zombie.cpp \
 
 OBJS = ${SRCS:.cpp=.o}
 
-GCC := clang++ -Wall -Wextra -Werror -std=c++98 -g
+GCC := c++ -Wall -Wextra -Werror -std=c++98 -g
 MV := mv -f
 RM := rm -f
 

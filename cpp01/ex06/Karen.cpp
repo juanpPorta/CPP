@@ -49,6 +49,8 @@ void Karen::complain(std::string level)
             a = i;
             break;
         }
+        else
+            a = -1;
     }
 
     switch (a)

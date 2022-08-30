@@ -5,7 +5,7 @@ SRCS =  main.cpp Weapon.cpp \
 
 OBJS = ${SRCS:.cpp=.o}
 
-GCC := clang++ -Wall -Wextra -Werror -std=c++98 -g
+GCC := c++ -Wall -Wextra -Werror -std=c++98 -g
 MV := mv -f
 RM := rm -f
 
