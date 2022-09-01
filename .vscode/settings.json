@@ -62,7 +62,13 @@
 		"fstream": "cpp",
 		"deque": "cpp",
 		"stack": "cpp",
-		"filesystem": "cpp"
+		"filesystem": "cpp",
+		"__node_handle": "cpp",
+		"__tree": "cpp",
+		"list": "cpp",
+		"map": "cpp",
+		"optional": "cpp",
+		"span": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }

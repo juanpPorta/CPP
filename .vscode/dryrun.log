@@ -1,6 +1,7 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/mnt/c/Users/juanp/Documents/programas/CPP'
-make: Leaving directory '/mnt/c/Users/juanp/Documents/programas/CPP'
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Volumes/sgoinfre/students/jporta/CPP'
+ 
+make: Leaving directory `/Volumes/sgoinfre/students/jporta/CPP'
  
 make: *** No targets specified and no makefile found.  Stop.
 
