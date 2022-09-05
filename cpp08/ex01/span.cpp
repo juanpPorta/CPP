@@ -41,10 +41,10 @@ int Span::shortestSpan(void)
 	int min = INT32_MAX;
 	if (this->fill <= 1)
 		throw(Span::NoSpanException());
-	for (std::vector<int>::iterator it = _array.begin(); it != _array.end(); it++)
+	for (std::vector<int>::iterator iter = _array.begin(); iter != _array.end(); iter++)
 		for (std::vector<int>::iterator jt = _array.begin(); jt < _array.end(); jt++)
-			if (jt != it && abs(*jt - *it) < min)
-				min = abs(*jt - *it);
+			if (jt != iter && abs(*jt - *iter) < min)
+				min = abs(*jt - *iter);
 	std::cout<<"min: "<<min<<std::endl;
 	return(min);
 
@@ -55,10 +55,10 @@ int Span::longestSpan()
 	int max = 0;
 	if (this->fill <= 1)
 		throw(Span::NoSpanException());
-	for (std::vector<int>::iterator it = this->_array.begin(); it != this->_array.end(); it++)
+	for (std::vector<int>::iterator iter = this->_array.begin(); iter != this->_array.end(); iter++)
 		for (std::vector<int>::iterator jt = this->_array.begin(); jt < this->_array.end(); jt++)
-			if (jt != it && abs(*jt - *it) > max)
-				max = abs(*jt - *it);
+			if (jt != iter && abs(*jt - *iter) > max)
+				max = abs(*jt - *iter);
 	std::cout<<"max: "<<max<<std::endl;
 	return(max);
 

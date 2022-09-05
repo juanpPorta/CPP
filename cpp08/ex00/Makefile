@@ -23,7 +23,6 @@ clean:
 fclean: clean
 	@$(RM) $(NAME)
 	@$(RM) $(OBJS)
-	@$(RM) *_shrubbery
 
 re: clean all
 

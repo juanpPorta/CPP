@@ -1,6 +1,6 @@
-NAME := ex01
+NAME := ex02
 
-SRCS =  main.cpp span.cpp
+SRCS =  main.cpp mutantstack.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
