@@ -8,7 +8,7 @@
 class Fixed{
     private:
         int num;
-        const static int nb = 8;
+        static const int nb = 8;
     public:
         Fixed(); // constructor
         Fixed(const Fixed &copy); // copy constructor

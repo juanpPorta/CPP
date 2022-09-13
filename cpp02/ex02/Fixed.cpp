@@ -6,7 +6,7 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 15:42:12 by jporta            #+#    #+#             */
-/*   Updated: 2022/06/28 20:10:42 by jporta           ###   ########.fr       */
+/*   Updated: 2022/09/07 16:48:45 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Fixed::Fixed() //forma de poner ppor defecto un valor
 
 Fixed::~Fixed()
 {
-	std::cout << "destructor called"<< std::endl;
+
 }
 
 Fixed &Fixed::operator=(const Fixed& fraction)
@@ -119,20 +119,15 @@ Fixed Fixed::operator + (const Fixed &fraction)
 
 Fixed Fixed::operator * (const Fixed &fraction)
 {
-	Fixed val;
-	float retval;
-	retval = fraction.num * this->num;
-	val = Fixed(retval);
-	return retval;
+
+	Fixed *val = new Fixed(fraction.toFloat() * this->toFloat());
+	return *val;
 }
 
 Fixed Fixed::operator / (const Fixed &fraction)
 {
-	Fixed val;
-	float retval;
-	retval = fraction.num / this->num;
-	val = Fixed(retval);
-	return retval;
+	Fixed *val = new Fixed(fraction.toFloat() / this->toFloat());
+	return *val;
 }
 
 bool Fixed::operator > (const Fixed &fraction)
@@ -214,5 +209,3 @@ const Fixed &Fixed::max(const Fixed &fix1, const Fixed &fix2)
 	else
 		return fix2;
 }
-
-
