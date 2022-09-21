@@ -1,19 +1,20 @@
-NAME := FragTrap
+NAME := ex01
 
-SRCS =  ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
+SRCS =  main.cpp Animal.cpp Dog.cpp Cat.cpp \
+		Brain.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
 
-GCC := c++ -Wall -Wextra -Werror -std=c++98 -g
-MV := mv -f
+GCC := clang++  -Wshadow -Wno-shadow -Wall -Wextra -Werror -std=c++98 -g
 RM := rm -f
 
 %.o: %.cpp
+	@echo "------------------------------------------------------------------------------------------------"
 	$(GCC) -c $< -o $@ 
-
 $(NAME): $(OBJS)
-	 $(GCC) -I .  -o $(NAME)  $^
-
+	@echo "------------------------------------------------------------------------------------------------------------------------------------------------"
+	$(GCC) -I .  -o $(NAME)  $^
+	@echo "------------------------------------------------------------------------------------------------------------------------------------------------"
 all: $(NAME)
 
 clean:
@@ -22,7 +23,6 @@ clean:
 fclean: clean
 	@$(RM) $(NAME)
 	@$(RM) $(OBJS)
-	
 
 re: clean all
 

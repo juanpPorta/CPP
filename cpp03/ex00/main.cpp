@@ -1,24 +1,34 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 15:52:46 by jporta            #+#    #+#             */
-/*   Updated: 2022/06/30 17:12:33 by jporta           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
+#include "WrongDog.hpp"
 
-int main(void)
+int main()
 {
-	ClapTrap clap("Juan");
-	ClapTrap clap2(clap);
-	clap.attack("antonio");
-	clap.takeDamage(3);
-	clap.beRepaired(5);
-	return(0);
-	
+	const Animal* meta = new Animal();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); //will output the cat sound!
+	j->makeSound();
+	meta->makeSound();
+
+	delete meta;
+	delete j;
+	delete i;
+
+    std::cout << std::endl << std::endl << std::endl;
+	//USE OF VIRTUAL
+	const WrongAnimal* wc = new WrongCat();
+	const WrongDog* wc2 = new WrongDog();
+	wc->makeSound();
+	wc2->makeSound();
+	delete wc;
+	delete wc2;
+	return 0;
+return 0;
 }

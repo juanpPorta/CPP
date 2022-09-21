@@ -6,7 +6,6 @@ SRCS =  main.cpp Animal.cpp Dog.cpp Cat.cpp \
 OBJS = ${SRCS:.cpp=.o}
 
 GCC := clang++  -Wshadow -Wno-shadow -Wall -Wextra -Werror -std=c++98 -g
-MV := mv -f
 RM := rm -f
 
 %.o: %.cpp

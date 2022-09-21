@@ -1,61 +1,52 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 15:52:46 by jporta            #+#    #+#             */
-/*   Updated: 2022/07/05 16:10:04 by jporta           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-// int main(void)
-// {
-// 	ClapTrap clap("Han solo");
-// 	std::cout<<"-------------------------------------------------------"<<std::endl;
-// 	ScavTrap clap2("Chewaka");
-// 	std::cout<<"-------------------------------------------------------"<<std::endl;
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-// 	std::cout<< clap.getEnergyPoints()<<std::endl;
-// 	std::cout<<"-------------------------------------------------------"<<std::endl;
-// 	std::cout<< clap2.getEnergyPoints()<<std::endl;
-// 	std::cout<<"-------------------------------------------------------"<<std::endl;
-// 	clap.attack("Storm Trooper");
-// 	std::cout<<"-------------------------------------------------------"<<std::endl;
-// 	clap2.attack("Storm Trooper");
-// 	std::cout<<"-------------------------------------------------------"<<std::endl;
-// 	clap.takeDamage(3);
-// 	std::cout<<"-------------------------------------------------------"<<std::endl;
-// 	clap.beRepaired(5);
-// 	std::cout<<"-------------------------------------------------------"<<std::endl;
-// 	clap2.guardGate();
-// 	std::cout<<"-------------------------------------------------------"<<std::endl;
-// 	return(0);
-	
-// }
-
-int	main( void )
+int main()
 {
+	// const Animal* j = new Dog();
+	// const Animal* i = new Cat();
+	// std::cout << j->getType() << " " << std::endl;
+	// std::cout << i->getType() << " " << std::endl;
+	// i->makeSound(); //will output the cat sound!
+	// j->makeSound();
+	
+	// std::cout << std::endl << std::endl << std::endl;
+	// Animal *animalarray[10];
+	// for(int i = 0;i < 5;i++)
+	// 	animalarray[i] = new Dog();
+	// for(int i = 5;i < 10;i++)
+	// 	animalarray[i] = new Cat();
+
+	// Animal *deepcopy;
+	// deepcopy = animalarray[2];
+	// std::cout << "Deep copy " << deepcopy->getType() << std::endl;
+	// for(int i = 0;i < 10;i++)
+	// 	delete animalarray[i];
+	
+	// std::cout << std::endl << std::endl << std::endl << "DEEP COPY BRAIN " << std::endl  << std::endl; 
+	
 	{
-		ScavTrap sc4vtp("sc4vtp");
-		sc4vtp.attack("Handsome Jack");
-		sc4vtp.takeDamage(6);
-		sc4vtp.beRepaired(4);
-		sc4vtp.takeDamage(3);
-		sc4vtp.guardGate();
-		sc4vtp.beRepaired(8);
-		sc4vtp.takeDamage(17);
+		//DEEP COPY BRAIN
+		Dog* dog1 = new Dog;
+		
+
+		std::string ideas[100];
+		ideas[0] = "NOIDEA";
+		
+		dog1->GetBrain()->SetIdeas(ideas);
+
+		Dog deepcopydog = Dog(*dog1);
+
+		
+		ideas[0] = "IDEA";
+		
+		dog1->GetBrain()->SetIdeas(ideas);
+		
+		std::cout<<"este: " << dog1->GetBrain()->GetIdeas()[0] << std::endl;
+		delete dog1;
+		std::cout<<"este: " << deepcopydog.GetBrain()->GetIdeas()[0] << std::endl;
 	}
-	{
-		ClapTrap cl4ptp("cl4ptp");
-		cl4ptp.attack("Handsome Jack");
-		cl4ptp.takeDamage(6);
-		cl4ptp.beRepaired(4);
-		cl4ptp.takeDamage(3);
-		cl4ptp.beRepaired(8);
-		cl4ptp.takeDamage(17);
-	}
+	return (0);
 }

@@ -1,13 +1,11 @@
-NAME := DiamondTrap
+NAME := ex03
 
-SRCS =  ClapTrap.cpp main.cpp \
-		ScavTrap.cpp FragTrap.cpp \
-		DiamondTrap.cpp \
+SRCS =  AMateria.cpp Character.cpp\
+		MateriaSource.cpp main.cpp Cure.cpp Ice.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
 
-GCC := c++  -Wshadow -Wno-shadow -Wall -Wextra -Werror -std=c++98 -g
-MV := mv -f
+GCC := clang++  -Wshadow -Wno-shadow -Wall -Wextra -Werror  -std=c++98 -g
 RM := rm -f
 
 %.o: %.cpp
