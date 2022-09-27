@@ -25,16 +25,22 @@ Character::~Character()
 
 Character &Character::operator=(const Character &as)
 {
-	for (int i = 0; i < 4; i++)
-		this->inventory[i] = as.inventory[i];
-	this->name = name;
+	if (this != &as)
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			delete this->inventory[i];
+			this->inventory[i] = as.inventory[i]->clone();
+		}
+		this->name = as.name;
+	}
 	return(*this);
 }
 
 Character::Character(const Character &copy)
 {
 	for (int i = 0; i< 4; i++)
-		this->inventory[i] = copy.inventory[i];
+		this->inventory[i] = copy.inventory[i]->clone();
 	this->name = copy.name;
 }
 
@@ -64,11 +70,8 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
-	if(inventory[idx])
-	{
+	if (idx < 4)
 		this->inventory[idx]->use(target);
-	}
-		
 }
 
 void Character::setName(std::string name)

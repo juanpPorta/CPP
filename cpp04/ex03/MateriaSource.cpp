@@ -15,20 +15,26 @@ MateriaSource::~MateriaSource( void )
 }
 MateriaSource::MateriaSource(const MateriaSource &copy)
 {
-    this->inventory[0] = copy.inventory[0];
-    this->inventory[1] = copy.inventory[1];
-    this->inventory[2] = copy.inventory[2];
-    this->inventory[3] = copy.inventory[3];
-    this->nmaterias = copy.nmaterias;
+    int i = 0;
 
+  while (i < 4)
+  {
+      this->inventory[i] = copy.inventory[i]->clone();
+     i++;
+  }
+    this->nmaterias = copy.nmaterias;
 }
+
 MateriaSource &MateriaSource::operator =( const MateriaSource &materiasrc)
 {
-    this->inventory[0] = materiasrc.inventory[0];
-    this->inventory[1] = materiasrc.inventory[1];
-    this->inventory[2] = materiasrc.inventory[2];
-    this->inventory[3] = materiasrc.inventory[3];
-    this->nmaterias = materiasrc.nmaterias;
+   int i = 0;
+
+    while (i < 4)
+    {
+      delete this->inventory[i];
+      this->inventory[i] = materiasrc.inventory[i]->clone();
+      i++;
+    }
     return (*this);
 
 }
@@ -40,7 +46,7 @@ void MateriaSource::learnMateria(AMateria *amateria)
 		this->inventory[this->nmaterias] = amateria;
         this->nmaterias++;
   }
-    else
+  else
 		std::cout << "Materias is full" << std::endl;
 }
 
@@ -49,7 +55,7 @@ AMateria* MateriaSource::createMateria(std::string const &type)
     for (int i = 0; i < this->nmaterias; i++)
     {
       if (inventory[i]->getType().compare(type) == 0)
-        return (inventory[i]->clone()); 
+        return (inventory[i]->clone());
     }
 	return 0;
 
